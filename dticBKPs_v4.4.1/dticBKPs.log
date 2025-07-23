@@ -1,0 +1,88 @@
+[2025-07-21 12:15:46] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-21 12:32:52] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-21 12:32:55] ℹ️ Iniciando xen01_procesar_xva desde /media/rmonla/NS8_Disco2/syncs_XEN01. Eliminar: true, Sobrescribir: false
+[2025-07-21 12:32:55] ℹ️ Comprimiendo XVA /media/rmonla/NS8_Disco2/syncs_XEN01/srv-MauriK_20250703_134416.xva a /media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_XEN01/srv-MauriK/srv-MauriK_20250703_134416.tar.gz
+[2025-07-21 13:03:08] ℹ️ Compresión XVA OK: /media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_XEN01/srv-MauriK/srv-MauriK_20250703_134416.tar.gz
+[2025-07-21 13:03:08] ℹ️ Eliminando XVA original: /media/rmonla/NS8_Disco2/syncs_XEN01/srv-MauriK_20250703_134416.xva
+[2025-07-21 13:03:11] ℹ️ Procesados 1 .xva para tarea xen01_procesar_xva.
+[2025-07-21 13:50:43] ℹ️ Iniciando xen01_procesar_xva desde /media/rmonla/NS8_Disco2/syncs_XEN01. Eliminar: true, Sobrescribir: false
+[2025-07-21 13:50:43] ℹ️ Comprimiendo XVA /media/rmonla/NS8_Disco2/syncs_XEN01/srv-SysACADWeb_20250703_130811.xva a /media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_XEN01/srv-SysACADWeb/srv-SysACADWeb_20250703_130811.tar.gz
+[2025-07-21 14:33:41] ℹ️ Compresión XVA OK: /media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_XEN01/srv-SysACADWeb/srv-SysACADWeb_20250703_130811.tar.gz
+[2025-07-21 14:33:41] ℹ️ Eliminando XVA original: /media/rmonla/NS8_Disco2/syncs_XEN01/srv-SysACADWeb_20250703_130811.xva
+[2025-07-21 14:33:45] ℹ️ Procesados 1 .xva para tarea xen01_procesar_xva.
+[2025-07-21 15:59:04] ℹ️ Iniciando xen01_procesar_xva desde /media/rmonla/NS8_Disco2/syncs_XEN01. Eliminar: true, Sobrescribir: false
+[2025-07-21 15:59:04] ⚠️ No hay archivos .xva en '/media/rmonla/NS8_Disco2/syncs_XEN01' para la tarea xen01_procesar_xva.
+[2025-07-21 21:27:59] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-21 21:28:10] ℹ️ Iniciando xen01_procesar_xva desde /media/rmonla/NS8_Disco2/syncs_XEN01. Eliminar: true, Sobrescribir: false
+[2025-07-21 21:28:10] ⚠️ No hay archivos .xva en '/media/rmonla/NS8_Disco2/syncs_XEN01' para la tarea xen01_procesar_xva.
+[2025-07-21 21:29:31] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-21 21:29:35] ℹ️ Iniciando xen01_procesar_xva desde /media/rmonla/NS8_Disco2/syncs_XEN01. Eliminar: true, Sobrescribir: false
+[2025-07-21 21:29:35] ⚠️ No hay archivos .xva en '/media/rmonla/NS8_Disco2/syncs_XEN01' para la tarea xen01_procesar_xva.
+[2025-07-21 21:53:43] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-21 21:58:33] ℹ️ Configuración actualizada y guardada por el usuario.
+[2025-07-21 22:01:02] ℹ️ Iniciando rclone sync pmox1_sincronizar. Origen: pve_PMOX1:/var/lib/vz/dump/, Destino: /mnt/ns8Disco2/syncs_PMOX1/
+[2025-07-21 22:01:02] ℹ️ Ejecutando: rclone sync pve_PMOX1:/var/lib/vz/dump/ /mnt/ns8Disco2/syncs_PMOX1/ --progress -v
+[2025-07-21 22:04:26] ℹ️ Sincronización rclone OK para pmox1_sincronizar.
+[2025-07-22 11:45:12] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 11:45:21] ℹ️ Iniciando rclone sync pmox1_sincronizar. Origen: pve_PMOX1:/var/lib/vz/dump/, Destino: /mnt/ns8Disco2/syncs_PMOX1/
+[2025-07-22 11:45:21] ℹ️ Ejecutando: rclone sync pve_PMOX1:/var/lib/vz/dump/ /mnt/ns8Disco2/syncs_PMOX1/ --progress -v
+[2025-07-22 11:45:23] ℹ️ Sincronización rclone OK para pmox1_sincronizar.
+[2025-07-22 11:45:31] ℹ️ Iniciando procesamiento de logs/notes Proxmox para la tarea 'pmox1_procesar'.
+[2025-07-22 11:45:31] ℹ️ Origen: /media/NS8_Disco2/syncs_PMOX1/, Destino: /media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_PMOX1/
+[2025-07-22 11:45:31] ℹ️ Procesamiento Proxmox OK para pmox1_procesar.
+[2025-07-22 16:10:05] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 16:10:10] ℹ️ Iniciando pmox1_procesar desde /media/NS8_Disco2/syncs_PMOX1/. Eliminar: true, Sobrescribir: false
+[2025-07-22 16:10:10] ⚠️ No se encontraron archivos .log en '/media/NS8_Disco2/syncs_PMOX1/' para la tarea pmox1_procesar.
+[2025-07-22 16:12:00] ℹ️ Configuración actualizada y guardada por el usuario.
+[2025-07-22 16:12:05] ℹ️ Iniciando pmox1_procesar desde /mnt/ns8Disco2/syncs_PMOX1/. Eliminar: true, Sobrescribir: false
+[2025-07-22 16:12:05] ⚠️ Destino 'srvKOHA_20250626_143426.tar.gz' existe. No se sobrescribe. Saltando.
+[2025-07-22 16:12:05] ℹ️ Comprimiendo Proxmox set para 'srvOJS' (base: vzdump-qemu-103-2025_06_28-14_34_18)
+[2025-07-22 16:13:52] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX1/srvOJS/srvOJS_20250628_143516.tar.gz
+[2025-07-22 16:13:52] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-103-2025_06_28-14_34_18'...
+[2025-07-22 16:13:52] ℹ️ Comprimiendo Proxmox set para 'srvTELEs' (base: vzdump-qemu-104-2025_06_28-14_35_16)
+[2025-07-22 16:15:12] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX1/srvTELEs/srvTELEs_20250628_143556.tar.gz
+[2025-07-22 16:15:12] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-104-2025_06_28-14_35_16'...
+[2025-07-22 16:15:12] ℹ️ Procesados 2 sets Proxmox para tarea pmox1_procesar.
+[2025-07-22 17:14:41] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 17:15:08] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 17:16:43] ℹ️ Configuración actualizada y guardada por el usuario.
+[2025-07-22 17:18:24] ℹ️ Configuración actualizada y guardada por el usuario.
+[2025-07-22 17:27:27] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 17:37:44] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 17:37:49] ℹ️ Iniciando rclone sync pmox2_sinc_ns8. Origen: pve_PMOX2:/var/lib/vz/dump/, Destino: /mnt/ns8Disco2/syncs_PMOX2/
+[2025-07-22 17:37:49] ℹ️ Ejecutando: rclone sync pve_PMOX2:/var/lib/vz/dump/ /mnt/ns8Disco2/syncs_PMOX2/ --progress -v
+[2025-07-22 17:50:00] ℹ️ Sincronización rclone OK para pmox2_sinc_ns8.
+[2025-07-22 17:50:18] ℹ️ Iniciando pmox2_procesar desde /mnt/ns8Disco2/syncs_PMOX2/. Eliminar: true, Sobrescribir: false
+[2025-07-22 17:50:18] ℹ️ Comprimiendo Proxmox set para 'pcvDASU2' (base: vzdump-qemu-108-2025_07_06-23_31_01)
+[2025-07-22 18:00:31] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX2/pcvDASU2/pcvDASU2_20250706_233431.tar.gz
+[2025-07-22 18:00:31] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-108-2025_07_06-23_31_01'...
+[2025-07-22 18:00:32] ℹ️ Comprimiendo Proxmox set para 'pcvDASU3' (base: vzdump-qemu-109-2025_07_06-23_28_11)
+[2025-07-22 18:08:02] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX2/pcvDASU3/pcvDASU3_20250706_233101.tar.gz
+[2025-07-22 18:08:02] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-109-2025_07_06-23_28_11'...
+[2025-07-22 18:08:03] ℹ️ Comprimiendo Proxmox set para 'pcvServiioWx' (base: vzdump-qemu-110-2025_07_06-23_25_31)
+[2025-07-22 18:15:45] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX2/pcvServiioWx/pcvServiioWx_20250706_232811.tar.gz
+[2025-07-22 18:15:45] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-110-2025_07_06-23_25_31'...
+[2025-07-22 18:15:46] ℹ️ Procesados 3 sets Proxmox para tarea pmox2_procesar.
+[2025-07-22 18:16:36] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 18:30:14] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 18:32:37] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 18:32:42] ℹ️ Iniciando rclone sync pmox3_sinc_ns8. Origen: pve_PMOX3:/var/lib/vz/dump/, Destino: /mnt/ns8Disco2/syncs_PMOX3/
+[2025-07-22 18:32:42] ℹ️ Ejecutando: rclone sync pve_PMOX3:/var/lib/vz/dump/ /mnt/ns8Disco2/syncs_PMOX3/ --progress -v
+[2025-07-22 18:32:43] ℹ️ Sincronización rclone OK para pmox3_sinc_ns8.
+[2025-07-22 18:35:22] ℹ️ Configuración actualizada y guardada por el usuario.
+[2025-07-22 18:35:56] ℹ️ Iniciando rclone sync pmox3_sinc_ns8. Origen: pve_PMOX3:/zfsDISCO1/backups/dump, Destino: /mnt/ns8Disco2/syncs_PMOX3/
+[2025-07-22 18:35:56] ℹ️ Ejecutando: rclone sync pve_PMOX3:/zfsDISCO1/backups/dump /mnt/ns8Disco2/syncs_PMOX3/ --progress -v
+[2025-07-22 18:47:55] ℹ️ Sincronización rclone OK para pmox3_sinc_ns8.
+[2025-07-22 18:54:44] ℹ️ Iniciando ns8_proc_bkps_pmox3 desde /mnt/ns8Disco2/syncs_PMOX3/. Eliminar: true, Sobrescribir: false
+[2025-07-22 18:54:44] ℹ️ Comprimiendo Proxmox set para 'srvFENIX' (base: vzdump-qemu-111-2025_07_03-11_19_24)
+[2025-07-22 19:05:27] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX3/srvFENIX/srvFENIX_20250703_113255.tar.gz
+[2025-07-22 19:05:27] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-111-2025_07_03-11_19_24'...
+[2025-07-22 19:05:28] ℹ️ Comprimiendo Proxmox set para 'srvFENIX' (base: vzdump-qemu-111-2025_07_06-22_56_27)
+[2025-07-22 19:18:18] ℹ️ Compresión Proxmox set OK: /mnt/ns8Disco3/dtic_BACKUPS/bkps_PMOX3/srvFENIX/srvFENIX_20250706_231320.tar.gz
+[2025-07-22 19:18:18] ℹ️ Eliminando fuentes Proxmox para 'vzdump-qemu-111-2025_07_06-22_56_27'...
+[2025-07-22 19:18:19] ℹ️ Procesados 2 sets Proxmox para tarea ns8_proc_bkps_pmox3.
+[2025-07-22 19:21:30] ℹ️ Iniciando ns8_proc_bkps_pmox3 desde /mnt/ns8Disco2/syncs_PMOX3/. Eliminar: true, Sobrescribir: false
+[2025-07-22 19:21:30] ⚠️ No se encontraron archivos .log en '/mnt/ns8Disco2/syncs_PMOX3/' para la tarea ns8_proc_bkps_pmox3.
+[2025-07-22 20:17:52] ℹ️ ===== Inicio script dticBKPs_app.rb v4.ruby.4.1 =====
+[2025-07-22 20:17:57] ℹ️ Iniciando rclone sync ns8_sinc_nube. Origen: /mnt/ns8Disco3/dtic_BACKUPS/, Destino: rmOneDrive:/dtic_BACKUPS/
+[2025-07-22 20:17:57] ℹ️ Ejecutando: rclone sync /mnt/ns8Disco3/dtic_BACKUPS/ rmOneDrive:/dtic_BACKUPS/ --progress -v

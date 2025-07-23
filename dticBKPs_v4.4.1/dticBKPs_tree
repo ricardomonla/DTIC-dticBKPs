@@ -1,0 +1,15 @@
+dticBKPs_v4.4.1/
+├── dticBKPs_app.rb           # <-- El orquestador principal, muy limpio.
+├── dticBKPs_conf.rb          # (Tu archivo de configuración de tareas)
+├── dticBKPs_log.rb           # (Tu clase para manejar el log)
+|
+├── core/
+│   └── globals.rb            # <-- Define constantes, colores y logger global.
+|
+└── fxs/
+    ├── config_handler.rb     # <-- Funciones para cargar/guardar la config.
+    ├── ui_handlers.rb        # <-- Funciones para el menú y edición de tareas.
+    └── processors/           # <-- Directorio para cada tipo de procesamiento.
+        ├── xva_processor.rb      # <-- Lógica específica para XVA.
+        ├── rclone_processor.rb   # <-- Lógica específica para RClone.
+        └── proxmox_processor.rb  # <-- Lógica específica para Proxmox.
