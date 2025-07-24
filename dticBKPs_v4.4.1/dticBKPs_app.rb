@@ -33,8 +33,8 @@ def bucle_principal
                 end
       }
     end
-    opciones_menu << { id: 'E', texto: "Editar Tareas", accion: -> { modificar_tareas_menu(tareas_config, auto_avanzar); tareas_config, auto_avanzar = cargar_configuracion } }
-    opciones_menu << { id: 'S', texto: "Salir", accion: -> { puts "Saliendo..."; exit 0 } }
+    opciones_menu << { id: 'E', texto: "Editar tareas programadas", accion: -> { modificar_tareas_menu(tareas_config, auto_avanzar); tareas_config, auto_avanzar = cargar_configuracion } }
+    opciones_menu << { id: 'S', texto: "Salir del procesador", accion: -> { puts "Saliendo..."; exit 0 } }
 
     system 'clear' or system 'cls'
     mostrar_encabezado_app
