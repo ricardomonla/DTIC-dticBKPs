@@ -1,0 +1,20 @@
+dticBKPs_v4.4.2/
+├── LICENSE
+├── README.md
+├── install.sh                  # <-- Script principal de instalación.
+│
+├── dticBKPs_app.rb             # <-- Ejecutable principal de la aplicación.
+├── dticBKPs_install.rb         # <-- Script de instalación en Ruby (dependencias, config).
+├── dticBKPs_conf.rb            # <-- Archivo de configuración de tareas.
+├── dticBKPs_log.rb             # <-- Módulo para configurar el logging.
+│
+├── core/
+│   └── globals.rb              # <-- Define constantes, colores y logger global.
+│
+└── fxs/
+    ├── config_handler.rb       # <-- Funciones para cargar/guardar la config.
+    ├── ui_handlers.rb          # <-- Funciones para el menú y edición de tareas.
+    └── processors/             # <-- Directorio para cada tipo de procesamiento.
+        ├── xva_processor.rb
+        ├── rclone_processor.rb
+        └── proxmox_processor.rb

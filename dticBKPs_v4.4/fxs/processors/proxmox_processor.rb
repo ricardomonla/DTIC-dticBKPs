@@ -1,5 +1,14 @@
-# Archivo: fxs/processors/proxmox_processor.rb
-# Contiene la lógica para encontrar, agrupar y comprimir sets de backup de Proxmox.
+# frozen_string_literal: true
+
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        fxs/processors/proxmox_processor.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 # Carga las constantes, logger y helpers globales
 require_relative '../../core/globals'
@@ -16,7 +25,6 @@ def procesar_backups_tipo_proxmox(tarea_cfg)
   puts "\n#{NEGRITA}#{CIAN}--- #{tarea_cfg[:menu_texto]} ---#{RESET}"
   log :info, "Iniciando #{tarea_cfg[:id]} desde #{dir_origen}. Eliminar: #{eliminar_original}, Sobrescribir: #{sobrescribir_destino}"
 
-  # Comprobar si 'pv' está disponible. Se hace una sola vez por ejecución del script.
   @pv_disponible ||= !`which pv`.to_s.strip.empty?
   unless @pv_disponible
     if @pv_notificado.nil?
@@ -43,10 +51,8 @@ def procesar_backups_tipo_proxmox(tarea_cfg)
     nombre_base_log = File.basename(ruta_log, '.log')
     
     begin
-      # Agrupar todos los archivos del mismo backup (ej: vzdump-qemu-101-...)
       archivos_fuente_del_backup = Dir.glob(File.join(dir_origen, "#{nombre_base_log}*"))
       
-      # Encontrar y leer el archivo .notes para obtener el nombre de la VM
       ruta_notes = archivos_fuente_del_backup.find { |f| f.end_with?('.notes') }
       unless ruta_notes
         log :warn, "No se encontró el archivo .notes para el set '#{nombre_base_log}'. Saltando."
@@ -59,13 +65,11 @@ def procesar_backups_tipo_proxmox(tarea_cfg)
         next
       end
 
-      # Construir las rutas y nombres de archivo de destino
       nombre_final_tar = "#{nombre_vm}_#{File.mtime(ruta_log).strftime('%Y%m%d_%H%M%S')}.tar.gz"
       dir_destino_vm = File.join(dir_destino_base, nombre_vm)
       FileUtils.mkdir_p(dir_destino_vm)
       ruta_salida_tar = File.join(dir_destino_vm, nombre_final_tar)
 
-      # Verificar si el archivo ya existe y si se debe sobrescribir
       if File.exist?(ruta_salida_tar)
         if sobrescribir_destino
           msg = "Destino '#{File.basename(ruta_salida_tar)}' existe. Se sobrescribirá."
@@ -84,7 +88,6 @@ def procesar_backups_tipo_proxmox(tarea_cfg)
       nombres_para_tar = archivos_fuente_del_backup.map { |f| File.basename(f) }
 
       if @pv_disponible
-        # Método con barra de progreso
         cmd_tar = ['tar', '-cf', '-', '-C', dir_origen] + nombres_para_tar
         cmd_pv = ['pv', '-s', archivos_fuente_del_backup.sum { |f| File.size(f) rescue 0 }.to_s]
         cmd_gzip = ['gzip']
@@ -98,7 +101,6 @@ def procesar_backups_tipo_proxmox(tarea_cfg)
           end
         end
       else
-        # Fallback: Usar 'tar' directamente sin barra de progreso
         archivos_escapados = nombres_para_tar.map { |f| Shellwords.escape(f) }.join(' ')
         cmd_tar_directo = "tar -czf #{Shellwords.escape(ruta_salida_tar)} -C #{Shellwords.escape(dir_origen)} #{archivos_escapados}"
         system(cmd_tar_directo)
@@ -120,7 +122,7 @@ def procesar_backups_tipo_proxmox(tarea_cfg)
       err_msg = "Error procesando set '#{nombre_base_log}': #{e.message}"
       log :error, err_msg
       puts "\n#{ICONO_ERROR} #{err_msg}"
-      FileUtils.rm_f(ruta_salida_tar) # Limpiar archivo parcial si la compresión falló
+      FileUtils.rm_f(ruta_salida_tar)
       next
     end
   end

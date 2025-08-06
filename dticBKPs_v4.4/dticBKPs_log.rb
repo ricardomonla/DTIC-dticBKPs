@@ -1,9 +1,15 @@
 #!/usr/bin/ruby
 # frozen_string_literal: true
 
-# NOMBRE DE APP ** dticBKPs_log.rb **
-# Ricardo MONLA (rmonla@)
-# Módulo de configuración de Logger para dticBKPs
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        dticBKPs_log.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 require 'logger'
 require 'fileutils'

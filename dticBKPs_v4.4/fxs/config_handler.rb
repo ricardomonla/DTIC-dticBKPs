@@ -1,3 +1,15 @@
+# frozen_string_literal: true
+
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        fxs/config_handler.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
+
 def cargar_configuracion
   unless File.exist?(APP_CFG_RUTA_ARCHIVO)
     puts "#{ICONO_ERROR} Archivo de configuración no encontrado: #{APP_CFG_RUTA_ARCHIVO}"

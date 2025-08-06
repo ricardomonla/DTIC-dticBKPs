@@ -1,9 +1,15 @@
 #!/usr/bin/ruby
 # frozen_string_literal: true
 
-# NOMBRE DE APP ** dticBKPs_install.rb **
-# Ricardo MONLA (rmonla@)
-# Script de Instalación y Verificación para dticBKPs (Debian/Ubuntu)
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        dticBKPs_install.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 require 'fileutils'
 
@@ -28,9 +34,7 @@ end
 
 def verificar_dependencias
   puts "#{NEGRITA}#{CIAN}--- Verificando Dependencias ---#{RESET}"
-  # Nota: 'ruby-full' puede ser necesario para algunas gemas, pero 'ruby' suele ser suficiente.
-  # awk, du y tar son parte de coreutils, pero los verificamos por si acaso.
-  deps = %w[ruby pv tar gzip rclone du awk]
+  deps = %w[ruby pv tar gzip rclone]
   faltantes = []
 
   deps.each do |dep|
@@ -42,17 +46,14 @@ def verificar_dependencias
     end
   end
 
-  # Si no falta nada, retornamos éxito.
   return true if faltantes.empty?
 
-  # Si faltan dependencias, preguntamos al usuario si desea instalarlas.
   puts "\n#{ICONO_WARN} Faltan las siguientes dependencias: #{NEGRITA}#{faltantes.join(', ')}#{RESET}."
   print "#{AMARILLO}¿Deseas intentar instalar las dependencias faltantes ahora? (S/N): #{RESET}"
   respuesta = $stdin.gets.chomp.downcase
 
   if respuesta == 's'
     puts "\n#{ICONO_INFO} Se necesita contraseña de administrador (sudo) para instalar paquetes."
-    # Actualizamos la lista de paquetes primero para evitar errores.
     puts "#{ICONO_INFO} Ejecutando: #{NEGRITA}sudo apt-get update#{RESET}..."
     system("sudo apt-get update")
     
@@ -81,60 +82,12 @@ def generar_archivo_cfg_defecto(ruta_cfg)
   end
 
   puts "#{ICONO_WARN} Archivo de configuración no encontrado. Se creará uno por defecto."
-  # (El contenido del archivo de configuración por defecto se mantiene igual)
   contenido_defecto = <<~CFG
     # Archivo de Configuración para dticBKPs
-    # Modifica estas tareas o añade nuevas editando este archivo
-    # o usando la opción 'E' en el menú de la aplicación.
-
+    # Generado automáticamente el #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}
     AUTO_AVANZAR_TAREA_MENU = true
-
     TAREAS_CONFIG = [
-      {
-        id: :xen01_procesar_xva,
-        menu_texto: "Procesar backups Xen01 (.xva)",
-        tipo_proceso: :xva,
-        origen: "/media/NS8_Disco2/syncs_XEN01/",
-        destino: "/media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_XEN01/",
-        eliminar_origen: true,
-        sobrescribir_destino: false,
-      },
-      {
-        id: :pmox1_sincronizar,
-        menu_texto: "Sincronizar backups PMOX1 (Remoto -> Local)",
-        tipo_proceso: :rclone_sync,
-        origen: "pve_PMOX1:/var/lib/vz/dump/",
-        destino: "/media/NS8_Disco2/syncs_PMOX1/",
-        eliminar_origen: false,
-        sobrescribir_destino: false,
-      },
-      {
-        id: :pmox1_procesar,
-        menu_texto: "Procesar backups PMOX1 (.log/.notes)",
-        tipo_proceso: :proxmox_log_notes,
-        origen: "/media/NS8_Disco2/syncs_PMOX1/",
-        destino: "/media/rmonla/NS8_Disco3/dtic_BACKUPS/bkps_PMOX1/",
-        eliminar_origen: true,
-        sobrescribir_destino: false
-      },
-      {
-        id: :nube_sincronizar,
-        menu_texto: "Sincronizar backups procesados -> Nube (Local -> Remoto)",
-        tipo_proceso: :rclone_sync,
-        origen: "/media/rmonla/NS8_Disco3/dtic_BACKUPS/",
-        destino: "rmOneDrive:/dtic_BACKUPS/",
-        eliminar_origen: false,
-        sobrescribir_destino: false,
-      },
-      {
-        id: :servidor_a_servidor_sync,
-        menu_texto: "Sincronizar PMOX2 -> PMOX1 (Remoto -> Remoto)",
-        tipo_proceso: :rclone_sync,
-        origen: "pve_PMOX2:/var/lib/vz/dump/",
-        destino: "pve_PMOX1:/var/lib/vz/dump/",
-        eliminar_origen: false,
-        sobrescribir_destino: false,
-      }
+      # Agrega aquí tus tareas...
     ]
   CFG
   begin
@@ -162,8 +115,6 @@ if verificar_dependencias
   
   if respuesta_lanzar == 's'
     puts "\n#{ICONO_INFO} Lanzando la aplicación..."
-    # 'exec' reemplaza el proceso actual del instalador con el de la aplicación.
-    # Es la forma más limpia de "pasar el control".
     exec("./#{APP_EJECUTABLE}")
   else
     puts "\n#{ICONO_INFO} Entendido. Puedes ejecutar la aplicación en cualquier momento con: #{CIAN}./#{APP_EJECUTABLE}#{RESET}"

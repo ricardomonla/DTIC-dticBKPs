@@ -1,5 +1,13 @@
 #!/bin/bash
-# Este script ahora también es compatible con /bin/sh (dash)
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        install.sh
+#  VERSION:     v4.4.2 (of the main app)
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 # --- Colores para la salida ---
 CIAN='\033[0;96m'

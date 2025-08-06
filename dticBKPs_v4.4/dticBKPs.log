@@ -1,0 +1,8 @@
+[2025-07-31 17:28:16] ℹ️ ===== Inicio script dticBKPs_app.rb v4.4.2 =====
+[2025-07-31 17:45:33] ℹ️ ===== Inicio script dticBKPs_app.rb v4.4.2 =====
+[2025-07-31 17:46:03] ℹ️ ===== Inicio script dticBKPs_app.rb v4.4.2 =====
+[2025-07-31 17:46:42] ℹ️ Iniciando xen01_proc_xvas desde /mnt/ns8Disco2/syncs_XEN01/. Eliminar: true, Sobrescribir: false
+[2025-07-31 17:46:42] ⚠️ No hay archivos .xva en '/mnt/ns8Disco2/syncs_XEN01/' para la tarea xen01_proc_xvas.
+[2025-07-31 17:47:36] ℹ️ Iniciando rclone sync pmox1_sinc_ns8. Origen: pve_PMOX1:/var/lib/vz/dump/, Destino: /mnt/ns8Disco2/syncs_PMOX1/
+[2025-07-31 17:47:36] ℹ️ Ejecutando: rclone sync pve_PMOX1:/var/lib/vz/dump/ /mnt/ns8Disco2/syncs_PMOX1/ --progress -v
+[2025-07-31 18:01:16] ℹ️ Sincronización rclone OK para pmox1_sinc_ns8.

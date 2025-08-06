@@ -1,6 +1,24 @@
-# Archivo de Configuración para dticBKPs
-# Generado automáticamente el 2025-07-23 23:47:20
+# frozen_string_literal: true
+
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        dticBKPs_conf.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
+#
+#  Este archivo contiene las tareas de backup.
+#  Puede ser modificado manualmente o a través del editor
+#  integrado en la aplicación (opción 'E').
+#
+# ==========================================================
+
+# Generado automáticamente el 2025-07-31 16:26:42
 AUTO_AVANZAR_TAREA_MENU = true
+
 TAREAS_CONFIG = [
   {
     id: :xen01_proc_xvas,

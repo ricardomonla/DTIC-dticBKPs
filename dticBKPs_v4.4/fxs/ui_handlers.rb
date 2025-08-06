@@ -1,4 +1,14 @@
-# Archivo: fxs/ui_handlers.rb
+# frozen_string_literal: true
+
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        fxs/ui_handlers.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 # Carga las constantes y helpers globales
 require_relative '../core/globals'

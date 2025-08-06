@@ -1,4 +1,14 @@
-# Archivo: core/globals.rb
+# frozen_string_literal: true
+
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        core/globals.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 # --- REQUIRES GLOBALES ---
 require 'fileutils'
@@ -13,7 +23,7 @@ require_relative '../dticBKPs_log.rb'
 # --- CONSTANTES GLOBALES DEL SCRIPT ---
 APP_NOM_BASE = 'dticBKPs'
 APP_NOM = "#{APP_NOM_BASE}_app.rb"
-APP_VER = 'v4.4.1' # Versión actualizada
+APP_VER = 'v4.4.2' # Versión actualizada
 APP_AUTOR = "Ricardo MONLA (rmonla@)"
 
 # La ruta del script ahora se calcula desde este archivo para ser consistente

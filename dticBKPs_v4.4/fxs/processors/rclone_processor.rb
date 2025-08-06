@@ -1,4 +1,14 @@
-# Archivo: fxs/processors/rclone_processor.rb
+# frozen_string_literal: true
+
+# ==========================================================
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        fxs/processors/rclone_processor.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
+# ==========================================================
 
 # Carga las constantes y helpers globales
 require_relative '../../core/globals'

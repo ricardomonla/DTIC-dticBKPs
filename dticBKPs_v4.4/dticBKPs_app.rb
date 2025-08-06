@@ -2,9 +2,13 @@
 # frozen_string_literal: true
 
 # ==========================================================
-#  dticBKPs - Main Application Runner
-#  v4.ruby.4.1
-#  Este archivo carga los módulos y dirige la aplicación.
+#  dticBKPs - Automatic Backup Processor
+#  ----------------------------------------------------------
+#  APP:         dticBKPs
+#  FILE:        dticBKPs_app.rb
+#  VERSION:     v4.4.2
+#  AUTHOR:      Ricardo MONLA (rmonla@)
+#  LICENSE:     MIT License
 # ==========================================================
 
 # 1. Cargar las constantes globales, el logger y los requires.
